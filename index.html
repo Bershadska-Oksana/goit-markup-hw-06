@@ -54,18 +54,23 @@
             </li>
           </ul>
         </address>
+        <button class="btn-top" type="button">
+          <svg class="icon-top" width="24" height="24">
+            <use href="./images/icons.svg#icon_menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <main>
       <!-------- HERO -------->
-      <section class="hero-part">
+      <section class="hero-part hidden">
         <div class="container">
           <h1 class="text-at-hero">Effective Solutions for Your Business</h1>
           <button class="button-hero" type="button">Order Service</button>
         </div>
       </section>
       <!-------- BENEFITS -------->
-      <section class="benefits">
+      <section class="benefits hidden">
         <div class="container">
           <h2 class="visually-hidden">Our benefits</h2>
           <ul class="benefits-list">
@@ -122,7 +127,7 @@
         </div>
       </section>
       <!-------- TEAM -------->
-      <section class="team-part">
+      <section class="team-part hidden">
         <div class="container">
           <h2 class="team-title">Our Team</h2>
           <ul class="team-list">
@@ -305,7 +310,7 @@
         </div>
       </section>
       <!-------- PORTFOLIO -------->
-      <section class="portfolio">
+      <section class="portfolio hidden">
         <div class="container">
           <h2 class="portfolio-title">Our Portfolio</h2>
           <ul class="portfolio-title-list">
@@ -320,8 +325,8 @@
                 />
                 <p class="cardfolio">
                   14 Stylish and User-Friendly App Design Concepts · Task
-                  Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App
-                  · Cloud Storage App
+                  Manager App · Calorie Tracker App · Exotic Fruit App · Cloud
+                  Storage App
                 </p>
               </div>
               <div class="container-list-portfolio">
@@ -438,7 +443,8 @@
         </div>
       </section>
     </main>
-    <footer class="footer-style">
+    <!-------- FOOTER -------->
+    <footer class="footer-style hidden">
       <div class="container footer-container">
         <div class="container-logo">
           <a class="logo-footer" href="./index.html"
@@ -505,7 +511,7 @@
       </div>
     </footer>
     <!-- ======= Modal window ======== -->
-    <div class="backdrop is-open">
+    <div class="backdrop is-open hidden">
       <div class="modal">
         <button type="button" class="modal-close-btn">
           <svg class="modal-close-icon" width="8" height="8">
