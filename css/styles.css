@@ -46,6 +46,11 @@ img {
     padding: 0 15px;
   }
 }
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
 /* ========================================================================================================================================================
 Header
 ======================================================================================================================================================== */
@@ -107,9 +112,8 @@ Header
 
   .menu-link {
     color: #2e2f42;
-    font-size: 16px;
+    font-size: 12px;
     font-weight: 500;
-    line-height: 1.5;
     letter-spacing: 0.02em;
     padding: 24px 0;
     display: block;
@@ -180,47 +184,57 @@ HERO
   background: #2e2f42;
   line-height: 1.07;
   max-width: 320px;
-  max-height: 432px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 72px 52px 200px 52px;
-
+  margin: 0 auto;
+  padding: 72px 0;
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/img-name.jpg);
+    url(../images/hero/mobile1.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  text-align: center;
+}
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .hero-part {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero/mobile2.jpg);
+  }
 }
 .text-at-hero {
+  display: block;
   max-width: 216px;
-  max-height: 160px;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11111;
   letter-spacing: 0.02em;
   text-align: center;
   color: #fff;
-
-  margin: 0 auto;
-  margin-bottom: 48px;
+  flex-shrink: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 72px;
+  text-transform: none;
 }
 
 .button-hero {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: row;
+  display: block;
   gap: 10px;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 4px;
   padding: 16px 32px;
-  width: 169px;
+  min-width: 169px;
   height: 56px;
+  font-family: inherit;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   background: #4d5ae5;
-
   cursor: pointer;
   border: none;
   font-weight: 500;
@@ -228,7 +242,6 @@ HERO
   letter-spacing: 0.04em;
   line-height: 1.5;
   color: #ffffff;
-  margin: 0 auto;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-hero:focus,
@@ -241,112 +254,476 @@ HERO
     background: #2e2f42;
     line-height: 1.07;
     max-width: 768px;
-    max-height: 436px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 112px 136px 204px 136px;
-
+    padding: 112px 0;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/img-name.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+      url(../images/hero/tablet1.jpg);
+  }
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .hero-part {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/hero/tablet@2x.jpg);
+    }
   }
   .text-at-hero {
     width: 496px;
-    height: 120px;
-    font-weight: 700;
+
     font-size: 56px;
-    line-height: 1.07143;
-    letter-spacing: 0.02em;
-    text-align: center;
-    color: #fff;
-
-    margin: 0 auto;
-    margin-bottom: 48px;
-  }
-
-  .button-hero {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: row;
-    gap: 10px;
-    border-radius: 4px;
-    padding: 16px 32px;
-    width: 169px;
-    height: 56px;
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
-    background: #4d5ae5;
-
-    cursor: pointer;
-    border: none;
-    font-weight: 500;
-    font-size: 16px;
-    letter-spacing: 0.04em;
-    line-height: 1.5;
-    color: #ffffff;
-    margin: 0 auto;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .button-hero:focus,
-  .button-hero:hover {
-    background-color: #404bbf;
+    line-height: 1.07;
   }
 }
 @media screen and (min-width: 1158px) {
   .hero-part {
     background: #2e2f42;
-    line-height: 1.07;
     max-width: 1440px;
     height: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
     padding: 188px 0;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
       ),
-      url(../images/img-name.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+      url(../images/hero/desktop1.jpg);
+  }
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    .hero-part {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/hero/desktop2.jpg);
+    }
   }
   .text-at-hero {
-    font-weight: 700;
-    font-size: 56px;
-    line-height: 1.07;
-    letter-spacing: 0.02em;
-    text-align: center;
-    color: #fff;
-    max-width: 496px;
     margin: 0 auto;
     margin-bottom: 48px;
-  }
-
-  .button-hero {
-    cursor: pointer;
-    min-width: 169px;
-    height: 56px;
-    border: none;
-    border-radius: 4px;
-    background: #4d5ae5;
-    font-weight: 500;
-    letter-spacing: 0.04em;
-    line-height: 1.5;
-    color: #ffffff;
-    display: block;
-    margin: 0 auto;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  .button-hero:focus,
-  .button-hero:hover {
-    background-color: #404bbf;
   }
 }
 /* ========================================================================================================================================================
 BENEFITS
 ======================================================================================================================================================== */
+
+.benefits {
+  padding: 120px 0;
+}
+.benefits-icon {
+  display: none;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.benefits-name {
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.11111;
+  text-align: center;
+}
+.benefits-text {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #434455;
+  font-weight: 500;
+}
+.benefits-list {
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+}
+@media screen and (min-width: 768px) {
+  .benefits-list-item {
+    width: calc((100% - 24px) / 2);
+  }
+  .benefits-name {
+    text-align: justify;
+  }
+  .benefits-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 736px;
+    height: 312px;
+  }
+  .benefits-list {
+    flex-direction: row;
+    gap: 24px;
+    row-gap: 72px;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .benefits-list-item {
+    width: calc((100% - 72px) / 4);
+  }
+  .benefits-icon {
+    display: inline-block;
+  }
+  .benefits-text {
+    font-weight: 400;
+  }
+
+  .benefits-name {
+    font-weight: 500;
+    font-size: 20px;
+  }
+  .icon-benefits {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 112px;
+    background-color: #f4f4fd;
+    border-radius: 4px;
+    border: 1px solid #8e8f99;
+    margin-bottom: 8px;
+  }
+  .benefits-list {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 1128px;
+    height: 224px;
+    gap: 24px;
+  }
+}
+/* ========================================================================================================================================================
+TEAM
+======================================================================================================================================================== */
+.team-part {
+  background-color: #f4f4fd;
+}
+.team-title {
+  font-size: 36px;
+  line-height: 1.11;
+  text-align: center;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: #2e2f42;
+  margin-bottom: 72px;
+}
+.team-list {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  text-align: center;
+  row-gap: 72px;
+}
+.team-name {
+  text-align: center;
+  margin-bottom: 8px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  color: #2e2f42;
+}
+.team-text {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #434455;
+  text-align: center;
+}
+.team-list-item {
+  display: flex;
+  flex-direction: column;
+  width: 264px;
+
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  background-color: #ffffff;
+  border-radius: 0px 0px 4px 4px;
+}
+.container-team {
+  padding: 32px 0;
+}
+.list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 8px;
+
+  justify-content: center;
+}
+.social-list-item {
+  width: 40px;
+  height: 40px;
+}
+.social-list-icon {
+  background-color: #4d5ae5;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  fill: #f4f4fd;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.social-list {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  column-gap: 16px;
+}
+.social-list-link_ {
+  background-color: #4d5ae5;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  fill: #f4f4fd;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 768px) {
+  .team-part {
+    padding: 64px 0;
+  }
+
+  .team-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+
+    flex-direction: row;
+    justify-content: center;
+
+    row-gap: 64px;
+  }
+  .team-list-item {
+    width: calc((100% - 24px) / 2);
+  }
+}
+@media screen and (min-width: 1158px) {
+  .team-part {
+    padding: 120px 0;
+  }
+  .team-list {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 1128px;
+    height: 224px;
+    gap: 24px;
+  }
+  .team-list-item {
+    width: calc((100% - 72px) / 4);
+  }
+  .social-list-link_:hover,
+  .social-list-link_:focus {
+    background-color: #404bbf;
+  }
+}
+/* ========================================================================================================================================================
+PORTFOLIO
+======================================================================================================================================================== */
+
+/* ========================================================================================================================================================
+FOOTER
+======================================================================================================================================================== */
+.footer-style {
+  background: #2e2f42;
+}
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  gap: 72px;
+
+  width: 320px;
+  height: 664px;
+}
+.container-logo {
+  display: inline-block;
+  text-align: center;
+  margin-top: 96px;
+}
+.sm-container {
+  display: inline-block;
+  text-align: center;
+  width: 208px;
+  height: 80px;
+}
+.subscribe-container {
+  display: inline-block;
+  text-align: center;
+}
+.subscribe-form {
+  display: flex;
+  column-gap: 8px;
+  gap: 24px;
+  gap: 24px;
+}
+.subscribe {
+  margin-bottom: 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+}
+
+.subscribe-form-input {
+  border: 1px solid #fff;
+  border-radius: 4px;
+  width: 288px;
+  height: 40px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  background-color: transparent;
+  padding-left: 16px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.subscribe-button {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #fff;
+  border-radius: 4px;
+  padding: 8px 24px;
+  height: 40px;
+  background-color: #4d5ae5;
+  min-width: 165px;
+  cursor: pointer;
+  border: none;
+
+  flex-direction: row;
+  gap: 16px;
+
+  width: 165px;
+}
+.subscribe-container {
+  margin-left: auto;
+  width: 288px;
+  height: 136px;
+}
+.footer-text {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #f4f4fd;
+  max-width: 288px;
+}
+.logo-footer {
+  line-height: 1.17;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #4d5ae5;
+  display: inline-block;
+  margin-bottom: 16px;
+
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 0px;
+  width: 116px;
+  height: 24px;
+}
+.logo-part-footer {
+  color: #f4f4fd;
+}
+.social-media {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: #fff;
+  margin-bottom: 16px;
+}
+.social-list {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  column-gap: 16px;
+}
+.social-list-item {
+  width: 40px;
+  height: 40px;
+}
+.footer-container {
+  display: flex;
+  align-items: baseline;
+}
+
+.social-list-icon {
+  fill: #f4f4fd;
+}
+.subscribe-form-input::placeholder {
+  font-size: 18px;
+  letter-spacing: -0.02em;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.subscribe-form-input::placeholder {
+  color: #ffffff;
+}
+.social-list-link {
+  background-color: #4d5ae5;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  fill: #f4f4fd;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 768px) {
+  .subscribe-button {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 1158px) {
+  .footer-style {
+    padding: 100px 0;
+  }
+  .subscribe-form-input {
+    width: 264px;
+  }
+  .container-logo {
+    margin-right: 120px;
+  }
+  .footer-text {
+    max-width: 264px;
+  }
+  .social-list-link:hover,
+  .social-list-link:focus {
+    background-color: #31d0aa;
+  }
+}
