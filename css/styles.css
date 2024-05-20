@@ -16,6 +16,15 @@ ol {
   padding: 0;
   margin: 0;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
 a {
   color: inherit;
   text-decoration: none;
@@ -112,7 +121,7 @@ Header
 
   .menu-link {
     color: #2e2f42;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 500;
     letter-spacing: 0.02em;
     padding: 24px 0;
@@ -181,7 +190,7 @@ HERO
 ======================================================================================================================================================== */
 
 .hero-part {
-  background: #2e2f42;
+  background-color: #2e2f42;
   line-height: 1.07;
   max-width: 320px;
   margin: 0 auto;
@@ -219,7 +228,7 @@ HERO
   flex-shrink: 0;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 72px;
+  margin-bottom: 36px;
   text-transform: none;
 }
 
@@ -251,15 +260,8 @@ HERO
 
 @media screen and (min-width: 768px) {
   .hero-part {
-    background: #2e2f42;
-    line-height: 1.07;
     max-width: 768px;
     padding: 112px 0;
-    background-image: linear-gradient(
-        rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 0.7)
-      ),
-      url(../images/hero/tablet1.jpg);
   }
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
@@ -273,24 +275,15 @@ HERO
     }
   }
   .text-at-hero {
-    width: 496px;
-
+    max-width: 496px;
     font-size: 56px;
     line-height: 1.07;
   }
 }
 @media screen and (min-width: 1158px) {
   .hero-part {
-    background: #2e2f42;
     max-width: 1440px;
-    height: 600px;
-    margin: 0 auto;
     padding: 188px 0;
-    background-image: linear-gradient(
-        rgba(46, 47, 66, 0.7),
-        rgba(46, 47, 66, 0.7)
-      ),
-      url(../images/hero/desktop1.jpg);
   }
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
@@ -313,7 +306,7 @@ BENEFITS
 ======================================================================================================================================================== */
 
 .benefits {
-  padding: 120px 0;
+  padding: 96px 0;
 }
 .benefits-icon {
   display: none;
@@ -359,12 +352,7 @@ BENEFITS
   .benefits-name {
     text-align: justify;
   }
-  .benefits-list {
-    display: flex;
-    flex-wrap: wrap;
-    width: 736px;
-    height: 312px;
-  }
+
   .benefits-list {
     flex-direction: row;
     gap: 24px;
@@ -373,6 +361,9 @@ BENEFITS
   }
 }
 @media screen and (min-width: 1158px) {
+  .benefits {
+    padding: 120px 0;
+  }
   .benefits-list-item {
     width: calc((100% - 72px) / 4);
   }
@@ -398,11 +389,9 @@ BENEFITS
     margin-bottom: 8px;
   }
   .benefits-list {
-    display: flex;
     flex-wrap: nowrap;
     width: 1128px;
     height: 224px;
-    gap: 24px;
   }
 }
 /* ========================================================================================================================================================
@@ -410,6 +399,7 @@ TEAM
 ======================================================================================================================================================== */
 .team-part {
   background-color: #f4f4fd;
+  padding: 96px 28px 96px 28px;
 }
 .team-title {
   font-size: 36px;
@@ -423,7 +413,6 @@ TEAM
 .team-list {
   display: flex;
   flex-direction: column;
-
   justify-content: center;
   text-align: center;
   row-gap: 72px;
@@ -448,7 +437,6 @@ TEAM
   display: flex;
   flex-direction: column;
   width: 264px;
-
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
   background-color: #ffffff;
@@ -462,25 +450,13 @@ TEAM
   justify-content: center;
   gap: 24px;
   margin-top: 8px;
-
   justify-content: center;
 }
 .social-list-item {
   width: 40px;
   height: 40px;
 }
-.social-list-icon {
-  background-color: #4d5ae5;
-  height: 100%;
-  width: 100%;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 0;
-  fill: #f4f4fd;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
+
 .social-list {
   display: flex;
   gap: 16px;
@@ -501,31 +477,27 @@ TEAM
 }
 @media screen and (min-width: 768px) {
   .team-part {
-    padding: 64px 0;
+    padding: 96px 108px 96px 108px;
   }
 
   .team-list {
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
-
     flex-direction: row;
     justify-content: center;
-
     row-gap: 64px;
   }
   .team-list-item {
-    width: calc((100% - 24px) / 2);
+    width: 264px;
   }
 }
 @media screen and (min-width: 1158px) {
   .team-part {
-    padding: 120px 0;
+    padding: 120px 156px 120px 156px;
   }
   .team-list {
     flex-wrap: nowrap;
-    width: 1128px;
-    height: 224px;
     gap: 24px;
   }
   .team-list-item {
@@ -540,8 +512,7 @@ TEAM
 PORTFOLIO
 ======================================================================================================================================================== */
 .portfolio {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding: 96px 16px 96px 16px;
 }
 .portfolio-title {
   font-weight: 700;
@@ -564,6 +535,8 @@ PORTFOLIO
   padding: 32px 16px;
 }
 .portfolio-list-item {
+  box-shadow: 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+  background: #fff;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-name {
@@ -587,8 +560,12 @@ PORTFOLIO
 }
 .cardfolio {
   position: absolute;
-  padding: 40px 32px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   color: #f4f4fd;
+  padding: 40px 32px;
   background-color: #4d5ae5;
   transform: translateY(100%);
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -601,7 +578,7 @@ PORTFOLIO
   margin-left: auto;
   margin-right: auto;
 }
-.portfolio-list-item:hover .card-overlay {
+.portfolio-list-item:hover .cardfolio {
   transform: translateX(0%);
 }
 .portfolio-list-item:hover {
@@ -620,6 +597,9 @@ PORTFOLIO
   }
 }
 @media (min-width: 1158px) {
+  .portfolio {
+    padding: 120px 156px 120px 156px;
+  }
   .portfolio-list-item {
     width: calc((100% - 48px) / 3);
   }
@@ -634,6 +614,7 @@ FOOTER
 .footer-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 72px;
   padding: 0 16px;
 }
@@ -677,12 +658,7 @@ FOOTER
   gap: 16px;
   justify-content: center;
 }
-.sm-container {
-  display: inline-block;
-  text-align: center;
-  width: 208px;
-  height: 80px;
-}
+
 .subscribe-container {
   display: inline-block;
   text-align: center;
@@ -716,9 +692,7 @@ FOOTER
   background-color: transparent;
   padding-left: 16px;
 }
-.subscribe-form-input::placeholder {
-  color: #ffffff;
-}
+
 .subscribe-form-input:focus {
   outline: transparent;
   border-color: #4d5ae5;
@@ -741,32 +715,23 @@ FOOTER
   font-family: inherit;
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.subscribe-container {
-  margin-left: auto;
-  width: 288px;
-  height: 136px;
-}
+
 .social-list-item {
   width: 40px;
   height: 40px;
-}
-.footer-container {
-  display: flex;
-  align-items: baseline;
 }
 
 .social-list-icon {
   fill: #f4f4fd;
 }
 .subscribe-form-input::placeholder {
-  font-size: 18px;
-  letter-spacing: -0.02em;
-  color: rgba(255, 255, 255, 0.3);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  color: #fff;
 }
 
-.subscribe-form-input::placeholder {
-  color: #ffffff;
-}
 .social-list-link {
   background-color: #4d5ae5;
   height: 40px;
@@ -780,6 +745,7 @@ FOOTER
   fill: #f4f4fd;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .subscribe-telegram {
   margin-left: 16px;
   fill: #ffffff;
@@ -792,13 +758,13 @@ FOOTER
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 24px;
+    align-items: baseline;
+    gap: 72px 24px;
     padding-left: 108px;
   }
   .container-logo {
     text-align: left;
     max-width: 264px;
-    height: 112px;
   }
   .social-media {
     text-align: left;
@@ -846,6 +812,10 @@ FOOTER
     gap: 0;
     padding-left: 15px;
   }
+  .subscribe-button:hover,
+  .subscribe-button:focus {
+    background-color: #31d0aa;
+  }
 }
 /* ========================================================================================================================================================
 MODAL-menu(header)
@@ -885,7 +855,9 @@ MODAL-menu(header)
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-left: auto;
   margin-bottom: 24px;
   background-color: transparent;
@@ -1033,6 +1005,11 @@ Modal Window
 .checkbox-field {
   margin-bottom: 8px;
 }
+.checkbox:checked + .label > .custom-checkbox {
+  background-color: #404bbf;
+  fill: #f4f4fd;
+  border: none;
+}
 .info {
   display: block;
   font-weight: 400;
@@ -1153,12 +1130,6 @@ Modal Window
     width: 408px;
     min-height: 584px;
   }
-  .label {
-    font-size: 12px;
-    line-height: 1.17;
-    letter-spacing: 0.04em;
-    color: #8e8f99;
-  }
 }
 @media screen and (min-width: 1158px) {
   .button:hover,
@@ -1170,7 +1141,6 @@ Modal Window
   .info-input:focus {
     border-color: #4d5ae5;
   }
-
   .info-input:focus + .checkbox-svg {
     fill: #4d5ae5;
   }

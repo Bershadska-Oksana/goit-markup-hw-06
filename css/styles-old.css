@@ -82,6 +82,18 @@ div {
 }
 
 /* ======== TEAM STYLES ======== */
+.social-list-icon {
+  background-color: #4d5ae5;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  fill: #f4f4fd;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 /* ======== PORTFOLIO STYLES ======== */
 .portfolio {
@@ -158,6 +170,10 @@ div {
 .footer-style {
   background: #2e2f42;
   padding: 100px 0;
+}
+.sm-container {
+  display: inline-block;
+  text-align: center;
 }
 
 /* ======== Modal window ========= */
