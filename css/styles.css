@@ -262,6 +262,11 @@ HERO
   .hero-part {
     max-width: 768px;
     padding: 112px 0;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero/tablet1.jpg);
   }
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
@@ -284,6 +289,11 @@ HERO
   .hero-part {
     max-width: 1440px;
     padding: 188px 0;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/hero/desktop1.jpg);
   }
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
@@ -399,7 +409,7 @@ TEAM
 ======================================================================================================================================================== */
 .team-part {
   background-color: #f4f4fd;
-  padding: 96px 28px 96px 28px;
+  padding: 96px 0;
 }
 .team-title {
   font-size: 36px;
@@ -415,6 +425,7 @@ TEAM
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  align-items: center;
   row-gap: 72px;
 }
 .team-name {
@@ -476,10 +487,6 @@ TEAM
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (min-width: 768px) {
-  .team-part {
-    padding: 96px 108px 96px 108px;
-  }
-
   .team-list {
     display: flex;
     flex-wrap: wrap;
@@ -494,7 +501,7 @@ TEAM
 }
 @media screen and (min-width: 1158px) {
   .team-part {
-    padding: 120px 156px 120px 156px;
+    padding: 120px 0;
   }
   .team-list {
     flex-wrap: nowrap;
@@ -512,7 +519,7 @@ TEAM
 PORTFOLIO
 ======================================================================================================================================================== */
 .portfolio {
-  padding: 96px 16px 96px 16px;
+  padding: 96px 0;
 }
 .portfolio-title {
   font-weight: 700;
@@ -590,7 +597,7 @@ PORTFOLIO
     flex-direction: row;
     flex-wrap: wrap;
     column-gap: 24px;
-    row-gap: 72px;
+    row-gap: 48px;
   }
   .portfolio-list-item {
     width: calc((100% - 24px) / 2);
@@ -598,7 +605,7 @@ PORTFOLIO
 }
 @media (min-width: 1158px) {
   .portfolio {
-    padding: 120px 156px 120px 156px;
+    padding: 120px 0;
   }
   .portfolio-list-item {
     width: calc((100% - 48px) / 3);
@@ -934,6 +941,11 @@ MODAL-menu(header)
 /* ========================================================================================================================================================
 Modal Window
 ======================================================================================================================================================== */
+@media screen and (min-width: 768px) {
+  .modal-menu {
+    display: none;
+  }
+}
 .backdrop {
   display: flex;
   justify-content: center;
